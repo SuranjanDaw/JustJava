@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.justjava.MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/coffee"
+            android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:id="@+id/p1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+        <EditText
+            android:id="@+id/NameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:hint="@string/edit_field"
+            android:inputType="textCapWords"
+            android:textColor="#ffb445"
+            android:textColorHint="#4e342e"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_prefer"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:textColor="#ffb445"/>
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_whipcream"
+            android:textColor="#ffb445"
+            android:textSize="16sp"
+            android:padding="8dp" />
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_chocolate"
+            android:textColor="#ffb445"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ask_the_quantity"
+            android:textColor="#ffb445"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="115dp">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="#ffb445"
+                android:background="@color/colorAccent"
+                android:onClick="decrement" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_cups"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="#ffb445"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:onClick="increment"
+                android:text="+"
+                android:textColor="#ffb445"
+                android:background="@color/colorAccent" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_summary"
+            android:textColor="#ffb445"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_summay_text"
+            android:padding="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="20dp"
+            android:textColor="#ffb445"/>
+
+    </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_order"
+            android:textColor="#ffb445"
+            android:background="@color/colorAccent"
+            android:onClick="submitOrder"
+            android:layout_below="@+id/p1"/>
+    </RelativeLayout>
+
+</ScrollView>
